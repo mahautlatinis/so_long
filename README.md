@@ -1,4 +1,12 @@
-# So long 🐬
+# so_long 📚
+
+so_long - 2021 (Common Core)
+
+- Actual Status : finished.
+- Result        : 115% (validated 28/06/2O21)
+
+[![forthebadge](https://forthebadge.com/images/badges/made-with-c.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
 
 So long sera probablement votre premier projet graphique (avec la minilibX). C'est un bon exercice pour vous préparer pour cub3d. Les parsings sont similaires (mais celui de so_long est plus court/simple). Vous devrez uniquement gérer la vue 2D (top view). L'objectif est de récupérer tous les collectibles puis d'accéder au point de sortie "avec le moins de mouvements possibles". Nous devrons compter et afficher chaque mouvement. La difficulté se trouve principalement dans la découverte de la MLX.
 
