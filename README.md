@@ -3,7 +3,7 @@
 so_long - 2021 (Common Core)
 
 - Actual Status : finished.
-- Result        : 115% (validated 28/06/2O21)
+- Result        : 115% (validated 28/06/2021)
 
 [![forthebadge](https://forthebadge.com/images/badges/made-with-c.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
