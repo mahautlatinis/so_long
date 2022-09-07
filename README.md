@@ -2,7 +2,7 @@
 
 so_long - 2021 (Common Core)
 
-![](solong.gif)
+<img src="https://github.com/42cursus/so_long/blob/update/solong.gif" width="80%">
 
 ❗️ Will compile on Linux OS (42 VM, xubuntu...) only !
 
@@ -13,8 +13,6 @@ so_long - 2021 (Common Core)
 [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
 
 So long sera probablement votre premier projet graphique (avec la minilibX). C'est un bon exercice pour vous préparer pour cub3d. Les parsings sont similaires (mais celui de so_long est plus court/simple). Vous devrez uniquement gérer la vue 2D (top view). L'objectif est de récupérer tous les collectibles puis d'accéder au point de sortie "avec le moins de mouvements possibles". Nous devrons compter et afficher chaque mouvement. La difficulté se trouve principalement dans la découverte de la MLX.
-
-![malatini](/screen.png)
 
 #### https://harm-smits.github.io/42docs/libs/minilibx
 
