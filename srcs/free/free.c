@@ -93,8 +93,9 @@ int	close_clean(t_mem *mem)
 		mlx_destroy_image(mem->vars->mlx, mem->data->img);
 	if (mem->vars->win)
 		mlx_destroy_window(mem->vars->mlx, mem->vars->win);
-	if (mem->vars->mlx)
-		mlx_destroy_display(mem->vars->mlx);
+	//TODO: a reprendre pour linux
+	// if (mem->vars->mlx)
+		// mlx_destroy_display(mem->vars->mlx);
 	if (mem->vars->mlx)
 		free(mem->vars->mlx);
 	free_mem(mem);

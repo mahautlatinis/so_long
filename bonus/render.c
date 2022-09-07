@@ -74,6 +74,8 @@ void	g_init_bonus(t_mem *m)
 	int		res_x;
 	int		res_y;
 
+	res_x = 900;
+	res_y = 900;
 	m->vars->mlx = mlx_init();
 	check_res(m, &res_x, &res_y);
 	m->frame = 0;

@@ -21,7 +21,18 @@
 # include <stdbool.h>
 # include <fcntl.h>
 # include <math.h>
-# include "./mlx/mlx.h"
+// # include "./mlx/mlx.h"
+
+# ifdef __linux__
+#  include "./mlx_linux/mlx.h"
+#  define USING_LINUX	1
+
+# else
+#  include "./mlx_mac/mlx.h"
+#  define USING_LINUX	0
+
+#endif
+
 # define ERROR -1
 # define DONE 0
 # define SUCCESS 1

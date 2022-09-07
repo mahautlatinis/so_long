@@ -46,25 +46,37 @@ OBJS_M		= ${SRCS_MANDATORY:.c=.o}
 
 UNAME		:= $(shell uname)
 
-PATH_MLX	= mlx
+ifeq ($(shell uname), Darwin)
+PATH_MLX	= mlx_mac
+else
+PATH_MLX	= mlx_linux
+endif
 CC 			= gcc
 CFLAGS		= -Wall -Wextra -Werror
 RM			= rm -f
 NAME		= so_long
+ifeq ($(shell uname), Darwin)
+FLAGS		= -framework OpenGL -framework AppKit
+else
 FLAGS		= -ldl -Imlx -Lmlx -lmlx -lm -lbsd -lXext -lX11 -Wl,-rpath=./bass/,-rpath=./mlx/,-rpath=./delay/
+endif
+
+LIB_FLAGS	= ${FLAGS} -L ${PATH_MLX} -lmlx
 
 all: 		${NAME}
 
 .c.o:
-			${CC} ${CFLAGS} -Imlx -Ibass -c $< -o ${<:.c=.o}
+			${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
+# ${CC} ${CFLAGS} -Imlx -Ibass -c $< -o ${<:.c=.o}
 
 $(NAME): 	$(OBJS) ${OBJS_M}
 			make -C $(PATH_MLX)
-			${CC} $(CFLAGS) -o $(NAME) $(OBJS) ${OBJS_M} $(FLAGS)
+			${CC} $(CFLAGS) -o $(NAME) $(OBJS) ${OBJS_M} $(LIB_FLAGS)
+# ${CC} $(CFLAGS) -o $(NAME) $(OBJS) ${OBJS_M} $(FLAGS)
 
 bonus:		${OBJS} ${OBJS_B}
 			make -C $(PATH_MLX)
-			${CC} ${CFLAGS} -o ${NAME} ${OBJS} ${OBJS_B} $(FLAGS)
+			${CC} ${CFLAGS} -o ${NAME} ${OBJS} ${OBJS_B} $(LIB_FLAGS)
 
 clean:
 			make -C $(PATH_MLX) clean

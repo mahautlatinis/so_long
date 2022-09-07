@@ -81,7 +81,12 @@ int	g_init(t_mem *m)
 void	so_long_loop(t_mem *mem)
 {
 	mlx_loop_hook(mem->vars->mlx, render_next_frame, mem);
+
 	mlx_hook(mem->vars->win, 2, 1L << 0, key_hook, mem);
-	mlx_hook(mem->vars->win, 33, 1L << 5, close_clean, mem);
+	// mlx_hook(game->vars->win, 03, 1L << 1, on_key_release, mem);
+
+	// mlx_hook(mem->vars->win, 33, 1L << 5, close_clean, mem);
+	mlx_hook(mem->vars->win, 17, 0L, close_clean, mem);
+
 	mlx_loop(mem->vars->mlx);
 }
