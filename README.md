@@ -2,6 +2,8 @@
 
 so_long - 2021 (Common Core)
 
+![](solong.gif)
+
 ❗️ Will compile on Linux OS (42 VM, xubuntu...) only !
 
 - Actual Status : finished.

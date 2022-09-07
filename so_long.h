@@ -23,25 +23,35 @@
 # include <math.h>
 // # include "./mlx/mlx.h"
 
-# ifdef __linux__
-#  include "./mlx_linux/mlx.h"
-#  define USING_LINUX	1
+// # ifdef __linux__
+// #  include "./mlx_linux/mlx.h"
+// #  define USING_LINUX	1
 
-# else
+// # else
 #  include "./mlx_mac/mlx.h"
-#  define USING_LINUX	0
+// #  define USING_LINUX	0
 
-#endif
+// #endif
 
 # define ERROR -1
 # define DONE 0
 # define SUCCESS 1
 # define BUFFER_SIZE 1
+
 # define M 64
-# define A 97
-# define W 119
-# define D 100
-# define S 115
+
+// For linux
+// # define A 97
+// # define W 119
+// # define D 100
+// # define S 115
+
+//For mac
+# define A 0
+# define W 13
+# define D 2
+# define S 1
+
 # define ESC 65307
 # define SAND 0xF5DCA0
 # define BLACK 0xFF000000
