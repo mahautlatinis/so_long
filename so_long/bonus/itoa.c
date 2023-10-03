@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   itoa.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
+/*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/24 10:21:10 by user42            #+#    #+#             */
-/*   Updated: 2021/06/24 16:47:02 by user42           ###   ########.fr       */
+/*   Updated: 2023/10/03 22:44:20 by mahautlatin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,9 @@
 
 void	display_moves_bonus(t_mem *mem)
 {
-	// int		res_x;
-	// int		res_y;
 	char	*it;
 
-	// res_x = 900;
-	// res_y = 900;
 	it = ft_itoa(mem->moves, mem);
-	// A reprendre pour linux
-	// mlx_get_screen_size(mem->vars->mlx, &res_x, &res_y);
 	mlx_string_put(mem->vars->mlx, mem->vars->win, 10, 20, BLACK, it);
 	free(it);
 }

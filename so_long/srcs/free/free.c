@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   free.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
+/*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/17 12:31:47 by malatini          #+#    #+#             */
-/*   Updated: 2021/06/25 14:56:03 by user42           ###   ########.fr       */
+/*   Updated: 2023/10/03 22:43:51 by mahautlatin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,16 +20,11 @@ void	free_map2d(t_mem *mem)
 		return ;
 	i = mem->map->lines;
 	if (i < 0)
-	{
-		ft_putstr_fd("Error.\nIncorrect map.\n", 2);
-		return ;
-	}
+		return (ft_putstr_fd("Error.\nIncorrect map.\n", 2));
 	while (i >= 0)
 	{
 		if (mem->map2d[i])
-		{
 			free(mem->map2d[i]);
-		}
 		i--;
 	}
 }
@@ -93,9 +88,6 @@ int	close_clean(t_mem *mem)
 		mlx_destroy_image(mem->vars->mlx, mem->data->img);
 	if (mem->vars->win)
 		mlx_destroy_window(mem->vars->mlx, mem->vars->win);
-	//TODO: a reprendre pour linux
-	// if (mem->vars->mlx)
-		// mlx_destroy_display(mem->vars->mlx);
 	if (mem->vars->mlx)
 		free(mem->vars->mlx);
 	free_mem(mem);
