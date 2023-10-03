@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   graphics.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
+/*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/15 16:44:11 by mahautlat         #+#    #+#             */
-/*   Updated: 2021/06/25 17:01:21 by user42           ###   ########.fr       */
+/*   Updated: 2023/10/03 22:42:38 by mahautlatin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,8 +45,6 @@ void	draw_on_img(t_data *img, t_data *s_img, int startX, int startY)
 	}
 }
 
-/* Permet d afficher en continue l'image principale sur laquelle on dessine */
-/* Obligation de retourner un int - mlx expectation */
 int	render_next_frame(t_mem *mem)
 {
 	mlx_put_image_to_window(mem->vars->mlx, mem->vars->win,
@@ -58,7 +56,6 @@ int	render_next_frame(t_mem *mem)
 	return (SUCCESS);
 }
 
-/* Ouvre la fenetre, charge les images etc */
 int	g_init(t_mem *m)
 {
 	m->vars->mlx = mlx_init();
@@ -81,12 +78,7 @@ int	g_init(t_mem *m)
 void	so_long_loop(t_mem *mem)
 {
 	mlx_loop_hook(mem->vars->mlx, render_next_frame, mem);
-
 	mlx_hook(mem->vars->win, 2, 1L << 0, key_hook, mem);
-	// mlx_hook(game->vars->win, 03, 1L << 1, on_key_release, mem);
-
-	// mlx_hook(mem->vars->win, 33, 1L << 5, close_clean, mem);
 	mlx_hook(mem->vars->win, 17, 0L, close_clean, mem);
-
 	mlx_loop(mem->vars->mlx);
 }

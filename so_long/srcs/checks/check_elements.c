@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check_elements.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
+/*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/19 13:42:21 by malatini          #+#    #+#             */
-/*   Updated: 2021/06/25 15:32:30 by user42           ###   ########.fr       */
+/*   Updated: 2023/10/03 22:42:51 by mahautlatin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,6 @@ void	check_res(t_mem *mem, int *res_x, int *res_y)
 {
 	*res_x = 900;
 	*res_y = 900;
-	// mlx_get_screen_size(mem->vars->mlx, res_x, res_y);
 	if (*res_y < M * mem->map->lines || *res_x < M * mem->map->col_max)
 	{
 		ft_putstr_fd("Error.\nMap is too big for resolution.\n", 2);

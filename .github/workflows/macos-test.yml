@@ -1,0 +1,18 @@
+name: tests macos
+
+on:
+  push:
+    branches: [ "update" ]
+  pull_request:
+    branches: [ "update" ]
+
+jobs:
+  build:
+
+    runs-on: macos-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: mandatory tests
+      run: cd so_long; make; ./so_long maps/doesnotexist.ber
+      shell: bash

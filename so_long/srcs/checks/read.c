@@ -6,7 +6,7 @@
 /*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/23 21:48:07 by user42            #+#    #+#             */
-/*   Updated: 2023/10/03 22:35:36 by mahautlatin      ###   ########.fr       */
+/*   Updated: 2023/10/03 22:47:06 by mahautlatin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ void	first_read(t_mem *mem, char **argv, char **line)
 	fd = open(argv[1], O_RDONLY);
 	if (fd < 0)
 	{
-		ft_putstr_fd("\033[0;31mError.\nBad file.\033[0m\n", 2);
+		ft_putstr_fd("\033[0;31mError.Bad file.\033[0m\n", 2);
 		free_mem(mem);
 	}
 	handle_args_error(fd, mem);
