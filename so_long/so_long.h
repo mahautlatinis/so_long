@@ -43,7 +43,8 @@
 # define LEFR 65363
 # define ESC 65307
 
-typedef struct s_data {
+typedef struct s_data
+{
 	void	*img;
 	char	*addr;
 	int		bits_per_pixel;
@@ -53,7 +54,8 @@ typedef struct s_data {
 	int		height;
 }				t_data;
 
-typedef struct s_vars {
+typedef struct s_vars
+{
 	void	*mlx;
 	void	*win;
 }				t_vars;

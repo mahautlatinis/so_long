@@ -2,16 +2,16 @@ name: norminette
 
 on:
   push:
-    branches: [ "update" ]
+    branches: ['update']
   pull_request:
-    branches: [ "update" ]
+    branches: ['update']
 
 jobs:
   norminette_job:
     runs-on: ubuntu-latest
     name: norminette
     steps:
-    - uses: actions/checkout@v2
-    - uses: alexandregv/norminette-action@v3
-      with:
-        flags: './so_long'
+      - uses: actions/checkout@v2
+      - uses: alexandregv/norminette-action@v3
+        with:
+          flags: './so_long'
