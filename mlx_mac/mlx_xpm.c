@@ -1,7 +1,12 @@
-// mlx xpm
-// by ol
+#ifdef __APPLE__
+# include <OpenGL/gl3.h>
+#endif
 
-#include <OpenGL/gl3.h>
+#ifdef __linux__
+# include <GL/gl.h>
+# include <GL/glext.h>
+#endif
+
 #include <stdlib.h>
 #include <stdio.h>
 #include <sys/mman.h>

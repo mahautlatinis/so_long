@@ -62,7 +62,7 @@ all: 		${NAME}
 
 $(NAME): 	$(OBJS) ${OBJS_M}
 			make -C $(PATH_MLX)
-			${CC} $(CFLAGS) -o $(NAME) $(OBJS) ${OBJS_M} $(LIB_FLAGS)
+			${CC} -I/usr/include $(CFLAGS) -o $(NAME) $(OBJS) ${OBJS_M} $(LIB_FLAGS)
 
 bonus:		${OBJS} ${OBJS_B}
 			make -C $(PATH_MLX)

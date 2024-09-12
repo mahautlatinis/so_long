@@ -1,7 +1,13 @@
-// mlx_opengl.m
-
 #import <Cocoa/Cocoa.h>
-#import <OpenGL/gl3.h>
+
+#ifdef __APPLE__
+# include <OpenGL/gl3.h>
+#endif
+
+#ifdef __linux__
+# include <GL/gl.h>
+# include <GL/glext.h>
+#endif
 #import <AppKit/NSOpenGLView.h>
 
 #include <stdio.h>
