@@ -38,7 +38,7 @@ SRCS_BONUS 		= 	/bonus/main_bonus.c \
 					./bonus/itoa.c \
 					./bonus/render.c \
 
-SRCS_MANDATORY	= 	/main.c \
+SRCS_MANDATORY	= 	./main.c \
 
 OBJS 			= 	${SRCS:.c=.o}
 OBJS_B			= 	${SRCS_BONUS:.c=.o}
