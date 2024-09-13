@@ -49,7 +49,7 @@ PATH_MLX 		= 	../mlx_mac
 CC 				=	gcc
 CFLAGS			=	-Wall -Wextra -Werror
 RM				=	rm -f
-NAME			= 	o_long
+NAME			= 	so_long
 FLAGS			=	-framework OpenGL -framework AppKit
 LIB_FLAGS		=	${FLAGS} -L ${PATH_MLX} -lmlx
 
