@@ -23,12 +23,12 @@ void	ft_putnbr_fd(int n, int fd)
 	if (nb < 0)
 	{
 		nb = -nb;
-		write(fd, "-", 1);
+		(void)write(fd, "-", 1);
 	}
 	if (nb > 9)
 		ft_putnbr_fd(nb / 10, fd);
 	temp = nb % 10 + '0';
-	write(fd, &temp, 1);
+	(void)write(fd, &temp, 1);
 }
 
 void	ft_putstr_fd(char *s, int fd)
