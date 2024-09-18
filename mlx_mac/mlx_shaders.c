@@ -1,9 +1,16 @@
-//  mlx_shaders.c
-
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
-#include <OpenGL/gl3.h>
+
+#ifdef __APPLE__
+# include <OpenGL/gl3.h>
+#endif
+
+#ifdef __linux__
+# include <GL/gl.h>
+# include <GL/glext.h>
+#endif
+
 #include "mlx_int.h"
 
 
