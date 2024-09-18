@@ -34,7 +34,7 @@ SRCS 			=	./srcs/checks/check_map_walls.c \
 					./srcs/error_handling/error1.c \
 					./srcs/free/free.c \
 
-SRCS_BONUS 		= 	/bonus/main_bonus.c \
+SRCS_BONUS 		= 	./bonus/main_bonus.c \
 					./bonus/itoa.c \
 					./bonus/render.c \
 
